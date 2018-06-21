@@ -4,6 +4,8 @@
 /dist
 /tmp
 /out-tsc
+token.ts
+src/app/layouts/main/token.ts
 
 # dependencies
 /node_modules
