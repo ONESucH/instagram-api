@@ -21,7 +21,14 @@ export class CarouselComponent implements OnInit {
   }
 
   ngOnInit() {
-    
+    this.carouselBuild();
+  }
+
+  carouselBuild() {
+    let carouselWidth = document.getElementsByClassName('main-carousel')[0].getBoundingClientRect(),
+      img = document.querySelector('.carousel-image');
+
+    console.log('img', img);
   }
 
 }

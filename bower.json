@@ -1,0 +1,23 @@
+{
+  "name": "instagram-api",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Bogdanov Ilya <bogdanov@comepay.ru>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "carousel",
+    "angular6",
+    "instagram"
+  ],
+  "homepage": "https://github.com/ONESucH/instagram-api",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/app/vendor",
+    "test",
+    "tests"
+  ]
+}

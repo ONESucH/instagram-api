@@ -1,0 +1,80 @@
+@import '../../aliases';
+@import '../../../libraries';
+
+.app-carousel {
+  display: flex;
+  .a-center;
+  .a-js-center;
+  border-top: 2px solid cornflowerblue;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  color: #fff;
+  text-shadow: 0 0 10px cornflowerblue;
+  z-index: 0;
+}
+
+.carousel {
+  position: relative;
+  .a-row-nowrap;
+  .a-row-nowrap;
+  .a-stretch;
+  .a-jc-space-betwen;
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+}
+
+// Кнопки управления
+.control-panel, .control-panel {
+  display: flex;
+  .a-center;
+  .a-js-center;
+  width: 10vw;
+  z-index: 2;
+  cursor: pointer;
+  &:hover i {
+    text-shadow: 0 0 20px lightskyblue;
+  }
+  i {
+    transition: .8s;
+    text-shadow: 0 0 10px lightskyblue;
+    margin: auto;
+    color: #fff;
+    font-size: calc(100% * 4);
+  }
+}
+
+// Центральная цасть статичная
+.main-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+// картинки движушиееся
+.drow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  .a-row-wrap;
+  .a-stretch;
+  width: 9999999999999px;
+}
+
+// картина внутри карусели
+.carousel-image {
+  position: relative;
+  img {
+    display: block;
+    width: auto;
+    height: 100%;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+  }
+}
