@@ -8,12 +8,15 @@ import { MainComponent } from './layouts/main/main.component';
 import { HeaderComponent } from './layouts/header/header.component';
 
 import { Token } from './layouts/main/token';
+import { CarouselComponent } from './layouts/carousel/carousel.component';
+import { ServiceUserData } from './service/userData/userData.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    HeaderComponent
+    HeaderComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,9 @@ import { Token } from './layouts/main/token';
     HttpModule
   ],
   providers: [
-    Token
+    Token,
+    MainComponent,
+    ServiceUserData
   ],
   bootstrap: [AppComponent]
 })

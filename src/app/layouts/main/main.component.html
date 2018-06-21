@@ -1,3 +1,12 @@
 <div class="app-main">
-  <h4>Example</h4>
+  <div class="fixed-scrolling">
+    <div class="user-block" *ngFor="let item of usersData">
+      <h5>{{item?.user.username}}</h5>
+      <h4>{{item?.user.full_name}}</h4>
+      <div><img src="{{item?.user.profile_picture}}" alt="logo"></div>
+      <div>{{item?.created_time | date: 'dd.MM.yyyy'}}</div>
+      <div>Пустое поле</div>
+      <a [routerLink]="['/carousel']" (click)="requestData(item?.carousel_media)">Посмотреть альбом</a>
+    </div>
+  </div>
 </div>
