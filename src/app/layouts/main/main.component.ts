@@ -48,17 +48,17 @@ export class MainComponent implements OnInit {
 
   /* Получили мои данные */
   myData(result) {
-    console.log('result', result);
+    //console.log('result', result);
   }
 
   /* Поиск по локации с дистанцией 100м - default=500 */
   location(users) {
-    console.log('users', users);
+    //console.log('users', users);
   }
 
   /* Поиск пользователя по ID */
   moreUsers(moreUsers) {
-    console.log('moreUsers', moreUsers);
+    //console.log('moreUsers', moreUsers);
   }
 
   /* Отправим данные на другой роутинг */

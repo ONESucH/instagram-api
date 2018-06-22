@@ -3,29 +3,8 @@
     <div class="control-panel" (click)="carouselBuild('prev')"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
     <div class="main-carousel">
       <div class="drow" [ngStyle]="drowBlock">
-        <div [ngStyle]="imgWidth" class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
-          <img src="/assets/img/instagram.jpg" alt="img"> <!-- {{item.carousel_media}} -->
-        </div>
-        <div [ngStyle]="imgWidth" class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
-          <img src="https://picsum.photos/300/300" alt="img"> <!-- {{item.carousel_media}} -->
-        </div>
-        <div [ngStyle]="imgWidth" class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
-          <img src="https://picsum.photos/300/300" alt="img"> <!-- {{item.carousel_media}} -->
-        </div>
-        <div [ngStyle]="imgWidth" class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
-          <img src="https://picsum.photos/300/300" alt="img"> <!-- {{item.carousel_media}} -->
-        </div>
-        <div [ngStyle]="imgWidth" class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
-          <img src="https://picsum.photos/300/300" alt="img"> <!-- {{item.carousel_media}} -->
-        </div>
-        <div [ngStyle]="imgWidth" class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
-          <img src="https://picsum.photos/300/300" alt="img"> <!-- {{item.carousel_media}} -->
-        </div>
-        <div [ngStyle]="imgWidth" class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
-          <img src="https://picsum.photos/300/300" alt="img"> <!-- {{item.carousel_media}} -->
-        </div>
-        <div [ngStyle]="imgWidth" class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
-          <img src="https://picsum.photos/300/300" alt="img"> <!-- {{item.carousel_media}} -->
+        <div [ngStyle]="imgWidth" class="carousel-image" *ngFor="let item of pasteCarousel">
+          <img src="{{item.images.standard_resolution.url}}" alt="img">
         </div>
       </div>
     </div>
