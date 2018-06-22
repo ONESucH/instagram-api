@@ -1,35 +1,34 @@
 <div class="app-carousel"> <!-- *ngIf="pasteCarousel ? 'undefined' : router.navigate(['/']);" -->
   <div class="carousel">
-    <div class="control-panel"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+    <div class="control-panel" (click)="carouselBuild('prev')"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
     <div class="main-carousel">
-      <div class="drow">
-        <div class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
-          <img src="/assets/img/instagram.jpg" alt="carousel-img"> <!-- {{item.carousel_media}} -->
+      <div class="drow" [ngStyle]="drowBlock">
+        <div [ngStyle]="imgWidth" class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
+          <img src="/assets/img/instagram.jpg" alt="img"> <!-- {{item.carousel_media}} -->
         </div>
-
-        <div class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
-          <img src="https://picsum.photos/300/300" alt="carousel-img"> <!-- {{item.carousel_media}} -->
+        <div [ngStyle]="imgWidth" class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
+          <img src="https://picsum.photos/300/300" alt="img"> <!-- {{item.carousel_media}} -->
         </div>
-        <div class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
-          <img src="https://picsum.photos/300/300" alt="carousel-img"> <!-- {{item.carousel_media}} -->
+        <div [ngStyle]="imgWidth" class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
+          <img src="https://picsum.photos/300/300" alt="img"> <!-- {{item.carousel_media}} -->
         </div>
-        <div class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
-          <img src="https://picsum.photos/300/300" alt="carousel-img"> <!-- {{item.carousel_media}} -->
+        <div [ngStyle]="imgWidth" class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
+          <img src="https://picsum.photos/300/300" alt="img"> <!-- {{item.carousel_media}} -->
         </div>
-        <div class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
-          <img src="https://picsum.photos/300/300" alt="carousel-img"> <!-- {{item.carousel_media}} -->
+        <div [ngStyle]="imgWidth" class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
+          <img src="https://picsum.photos/300/300" alt="img"> <!-- {{item.carousel_media}} -->
         </div>
-        <div class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
-          <img src="https://picsum.photos/300/300" alt="carousel-img"> <!-- {{item.carousel_media}} -->
+        <div [ngStyle]="imgWidth" class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
+          <img src="https://picsum.photos/300/300" alt="img"> <!-- {{item.carousel_media}} -->
         </div>
-        <div class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
-          <img src="https://picsum.photos/300/300" alt="carousel-img"> <!-- {{item.carousel_media}} -->
+        <div [ngStyle]="imgWidth" class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
+          <img src="https://picsum.photos/300/300" alt="img"> <!-- {{item.carousel_media}} -->
         </div>
-        <div class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
-          <img src="https://picsum.photos/300/300" alt="carousel-img"> <!-- {{item.carousel_media}} -->
+        <div [ngStyle]="imgWidth" class="carousel-image"> <!-- *ngFor="let item of pasteCarousel.data" -->
+          <img src="https://picsum.photos/300/300" alt="img"> <!-- {{item.carousel_media}} -->
         </div>
       </div>
     </div>
-    <div class="control-panel"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+    <div class="control-panel" (click)="carouselBuild('next')"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
   </div>
 </div>

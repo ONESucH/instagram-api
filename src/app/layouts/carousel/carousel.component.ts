@@ -11,6 +11,10 @@ export class CarouselComponent implements OnInit {
 
   public pasteCarousel;
   public router;
+  imgWidth;
+  drowBlock;
+  value = 0;
+  carouselLength = 3; // Сколько окон внутри карусели
 
   constructor(
     private carousel: ServiceUserData,
@@ -21,14 +25,29 @@ export class CarouselComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.carouselBuild();
+    this.carouselBuild('');
+    window.addEventListener('resize', () => this.carouselBuild);
   }
 
-  carouselBuild() {
+  carouselBuild(sub) {
     let carouselWidth = document.getElementsByClassName('main-carousel')[0].getBoundingClientRect(),
-      img = document.querySelector('.carousel-image');
-
-    console.log('img', img);
+      lengthImg = document.getElementsByClassName('carousel-image').length,
+      controller = (imgSize, sub) => {
+      let revert: any = '-'+imgSize * lengthImg;
+        if (sub == 'prev') this.value += imgSize;
+        if (sub == 'next') this.value -= imgSize;
+        if (this.value > imgSize) this.value = 0;
+        if (this.value < revert / this.carouselLength) this.value = 0;
+      };
+    controller(carouselWidth.width, sub);
+    /* Drow */
+    this.drowBlock = {
+      'margin-left': this.value + 'px' // Отступы
+    };
+    /* Img size */
+    this.imgWidth = {
+      'width': carouselWidth.width / this.carouselLength + 'px', // Ширина
+      'margin-right': carouselWidth.width / this.carouselLength / 50 + 'px' // Отступы
+    }
   }
-
 }
