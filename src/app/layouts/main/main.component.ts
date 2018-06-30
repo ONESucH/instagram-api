@@ -32,8 +32,6 @@ export class MainComponent implements OnInit {
 
     /* Получаем свои данные */
     this.serviceGetData('https://api.instagram.com/v1/users/self/media/recent/?access_token=', this.myData); // url, callback
-    //this.serviceGetData('https://api.instagram.com/v1/locations/search?lat=48.858844&lng=2.294351&distance=500&access_token=', this.location);
-    //this.serviceGetData('https://www.instagram.com/lb2605', this.moreUsers);
   }
 
   /* Сервис который будет возращать результат в формате json */
@@ -48,17 +46,17 @@ export class MainComponent implements OnInit {
 
   /* Получили мои данные */
   myData(result) {
-    //console.log('result', result);
+
   }
 
   /* Поиск по локации с дистанцией 100м - default=500 */
   location(users) {
-    //console.log('users', users);
+
   }
 
   /* Поиск пользователя по ID */
   moreUsers(moreUsers) {
-    //console.log('moreUsers', moreUsers);
+
   }
 
   /* Отправим данные на другой роутинг */

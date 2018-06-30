@@ -1,6 +1,7 @@
 <div class="app-carousel"> <!-- *ngIf="pasteCarousel ? 'undefined' : router.navigate(['/']);" -->
   <div class="carousel">
-    <div class="control-panel" (click)="carouselBuild('prev')"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+    <div class="control-panel" (click)="carouselBuild('prev')"><i class="fa fa-chevron-left" aria-hidden="true"></i>
+    </div>
     <div class="main-carousel">
       <div class="drow" [ngStyle]="drowBlock">
         <div [ngStyle]="imgWidth" class="carousel-image" *ngFor="let item of pasteCarousel">
@@ -8,6 +9,17 @@
         </div>
       </div>
     </div>
-    <div class="control-panel" (click)="carouselBuild('next')"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+    <div class="control-panel" (click)="carouselBuild('next')"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="carousel-controllers">
+    <div class="controllers">
+      <label>
+        <input type="radio" (click)="counterWallpaper($event, 1)">
+      </label>
+      <label>
+        <input type="radio" (click)="counterWallpaper($event, 2)">
+      </label>
+    </div>
   </div>
 </div>

@@ -50,4 +50,16 @@ export class CarouselComponent implements OnInit {
       'margin-right': carouselWidth.width / this.carouselLength / 50 + 'px' // Отступы
     }
   }
+
+  counterWallpaper(event, value) {
+    let checkbox = document.getElementsByTagName('input');
+
+    for (let counter = 0; counter < checkbox.length; counter++) {
+      checkbox[counter].checked = false;
+    }
+
+    event.target.checked = true;
+
+    console.log('value', value);
+  }
 }
